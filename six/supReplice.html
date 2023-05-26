@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Replace Substring Example</title>
+	<script type="text/javascript">
+		function replaceSubstring() {
+			// Prompt the user for the original string, substring to replace, and replacement string
+			var str = prompt("Enter the original string:");
+			var substr = prompt("Enter the substring to replace:");
+			var replacestr = prompt("Enter the replacement string:");
+
+			// Use the replace method with a regular expression to replace all occurrences of the substring
+			var newstr = str.replace(new RegExp(substr, 'g'), replacestr);
+
+			// Display the new string in an alert
+			alert("New string: " + newstr);
+		}
+	</script>
+</head>
+<body>
+	<button onclick="replaceSubstring()">Replace Substring</button>
+</body>
+</html>

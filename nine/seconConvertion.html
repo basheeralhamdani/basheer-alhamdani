@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Format Time Duration Example</title>
+
+
+	<script type="text/javascript">
+		function formatDuration(seconds) {
+			// Calculate the hours, minutes, and seconds
+			var hours = Math.floor(seconds / 3600);
+			var minutes = Math.floor((seconds - (hours * 3600)) / 60);
+			var seconds = seconds - (hours * 3600) - (minutes * 60);
+
+			// Format the duration string
+			var duration = "";
+			if (hours > 0) {
+				duration += hours + " hours, ";
+			}
+			if (minutes > 0) {
+				duration += minutes + " minutes, ";
+			}
+			if (seconds > 0) {
+				duration += seconds + " seconds";
+			}
+
+			// Return the formatted string
+			return duration;
+		}
+
+		// Example usage
+        function convert(){
+
+		var durationInSeconds =parseInt(document.getElementById("timeInSecond").value);
+		var formattedDuration = formatDuration(durationInSeconds);
+		window.alert(formattedDuration);
+    }
+	</script>
+</head>
+<body>
+    <h1>time convertion from second to hours,minutes,seconds</h1>
+    <input type="text" id="timeInSecond">
+    <button id="timeConvert" onclick="convert()"> convert  </button>
+</body>
+</html>

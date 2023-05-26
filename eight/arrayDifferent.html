@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Difference Between Two Strings Example</title>
+	<script type="text/javascript">
+		function stringDifference() {
+			// Prompt the user for two strings
+			var input1 = prompt("Enter the first string:");
+			var input2 = prompt("Enter the second string:");
+
+			// Convert the strings to arrays of characters
+			var arr1 = Array.from(input1);
+			var arr2 = Array.from(input2);
+
+			// Filter the characters in the first array that are not in the second array
+			var result = arr1.filter(function(char) {
+				return !arr2.includes(char);
+			});
+
+			// Return the resulting array
+			return result;
+		}
+
+		// Example usage
+		var stringDifferenceResult = stringDifference();
+	window.alert(stringDifferenceResult);
+	</script>
+</head>
+<body>
+</body>
+</html>
